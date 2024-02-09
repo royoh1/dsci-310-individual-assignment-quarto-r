@@ -24,4 +24,6 @@ reports/qmd_example.pdf: results reports/qmd_example.qmd
 # clean
 clean:
 	rm -rf results
-	rm -rf reports/qmd_example.html reports/qmd_example.pdf
+	rm -rf reports/qmd_example.html \
+		reports/qmd_example.pdf \
+		reports/qmd_example_files
