@@ -46,6 +46,8 @@ Suppose we were interested in looking in more closely at the province
 with the highest spread (in terms of standard deviation) of horse populations. 
 We present the standard deviations here:
 
+Table 1. Standard deviation of historical (1906-1972) horse populations for each Canadian province.
+
 ```{r}
 horses_sd_table <- read_csv("../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
