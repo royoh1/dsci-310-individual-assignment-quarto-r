@@ -6,6 +6,7 @@ format:
         toc: true
         toc-depth: 2
         toc-title: Table of Contents
+        self-contained: true
 bibliography: references.bib
 execute:
     echo: false
