@@ -5,7 +5,8 @@ all: results/horse_pop_plot_largest_sd.png \
 	results/horse_pops_plot.png \
 	results/horses_spread.csv \
 	reports/qmd_example.html \
-	reports/qmd_example.pdf
+	reports/qmd_example.pdf \
+	docs/index.html
 
 
 
@@ -21,9 +22,13 @@ reports/qmd_example.html: results reports/qmd_example.qmd
 reports/qmd_example.pdf: results reports/qmd_example.qmd
 	quarto render reports/qmd_example.qmd --to pdf
 
+docs/index.html: reports/qmd_example.html
+	cp reports/qmd_example.html docs/index.html
+
 # clean
 clean:
 	rm -rf results
 	rm -rf reports/qmd_example.html \
 		reports/qmd_example.pdf \
-		reports/qmd_example_files
+		reports/qmd_example_files \
+		docs/index.html
